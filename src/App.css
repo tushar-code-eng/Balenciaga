@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: serif;
+}
+
+.rotate-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.rotate-text2 {
+  text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.bgN {
+  transition: background-color 0.7s ease-in;
+}
+
+.bgN:hover {
+  background-color: #ffffff;
+}
+
+.bg1 {
+  transition: background-color 0.7s ease-out;
+}
+
+.bg1:hover {
+  background-color: #8e63e4;
+}
+.bg2 {
+  transition: background-color 0.7s ease-out;
+}
+
+.bg2:hover {
+  background-color: #2ecc71;
+}
+.bg3 {
+  transition: background-color 0.7s ease-out;
+}
+
+.bg3:hover {
+  background-color: #de83cd;
+}
+
+.animate {
+  animation: blurFade 5s infinite;
+}
+
+@keyframes blurFade {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(-10px);
+  }
+}
+
+.full-screen-exit {
+  animation: slideOut 2s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.img1-exit {
+  animation: slideUp 2s ease-in-out forwards;
+  animation-delay: 3.5s;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.img2-exit {
+  animation: slideLeft 2s ease-in-out forwards;
+  animation-delay: 4.5s;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.img3-exit {
+  animation: slideDown 2s ease-in-out forwards;
+  animation-delay: 5.5s;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.main-animate {
+  animation: bringDown 1.5s ease-out forwards;
+  /* animation-delay: 1s; */
+}
+
+@keyframes bringDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.underAnimation{
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  height: 1px;
+  background-color: black;
+  
+}
+
+.underAnimation1{
+  left: 0;
+  width: 0%;
+  transition: all cubic-bezier(0.19,1,0.22,1) 1.5s;
+  transition-delay: .1s;
+}
+
+.underAnimation2{
+  right:0;
+  width: 100%;
+  transition: all cubic-bezier(0.19,1,0.22,1) 1.5s;
+}
+
+.underlineParent:hover .underAnimation1{
+  width: 100%;
+}
+
+.underlineParent:hover .underAnimation2{
+  width: 0%;
+}
